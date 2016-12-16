@@ -1,6 +1,26 @@
 # HackerChat
 
-HackerChat is a revolutionary idea comparable only to the invention of hot water or the re-engineering of the wheel. HackerChat will solve any communication issue by putting a chat right where you need it: right in the terminal. On top of that, HackerChat comes with state-of-the-art filters to facilitate communication and reduce professional and cultural misunderstandings.
+HackerChat is a revolutionary idea comparable only to the invention of hot water or the re-engineering of the wheel. HackerChat will solve any communication issue by putting a chat right where you need it: right in the terminal. On top of that, HackerChat comes with state-of-the-art filters to facilitate communication and reduce professional and cultural misunderstandings (UK only).
+
+For example:
+
+```
+# Dev filters:
+> It's very verbose # this will be translated to its correct meaning:
+> It's Java
+
+# Company-wise filers:
+> Don't worry! # will be translated to:
+> Be worried!
+
+# UK filters:
+> I hear what you say # will be translated to:
+> I disagree and do not want to discuss it further
+
+> That is a very brave proposal # will be translated to:
+> You are insane
+
+```
 
 Over-engineered, under-tested and completely unstable, HackerChat has the security of a V8 mounted on a shopping cart: a great experience for your CPU and absolute hell for your users.
 
