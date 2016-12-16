@@ -1,8 +1,8 @@
 # go-chat
 
-Go Chat is a revolutionary idea comparable only to the invention of hot water or the re-engineering of the wheel. Go Chat will solve any communication issue by putting a chat right where you need it: right in the terminal. On top of that, Go Chat comes with state-of-the-art filters to facilitate communication and reduce professional and cultural misunderstandings.
+HackerChat is a revolutionary idea comparable only to the invention of hot water or the re-engineering of the wheel. HackerChat will solve any communication issue by putting a chat right where you need it: right in the terminal. On top of that, HackerChat comes with state-of-the-art filters to facilitate communication and reduce professional and cultural misunderstandings.
 
-Over-engineered, under-tested and completely unstable, Go Chat has the security of a V8 mounted on a shopping cart: a great experience for your CPU and absolute hell for your users.
+Over-engineered, under-tested and completely unstable, HackerChat has the security of a V8 mounted on a shopping cart: a great experience for your CPU and absolute hell for your users.
 
 *Make development great again!*
 
@@ -19,12 +19,7 @@ Over-engineered, under-tested and completely unstable, Go Chat has the security 
 
 ```bash
 
-git clone https://github.com/JSainsburyPLC/manchester-hackathon
-git checkout go-chat
-cd manchester-hackathon/xmas-2016/go-chat
-
-# Create a directory for the logs
-mkdir _logs
+git clone https://github.com/edoardo849/hackerchat
 
 # Install dependencies
 go get ./...
