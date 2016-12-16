@@ -37,7 +37,9 @@ func main() {
 	config := sarama.NewConfig()
 	config.Producer.Return.Errors = true
 	config.Producer.Return.Successes = true
-	kc, err := chat.NewKafkaClient([]string{"52.214.102.133:9092"}, config)
+
+	// TODO make this an env variable
+	kc, err := chat.NewKafkaClient([]string{"localhost:9092"}, config)
 	if err != nil {
 		log.WithError(err).Fatal("error connecting to kafka")
 	}
