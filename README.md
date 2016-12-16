@@ -1,4 +1,4 @@
-# go-chat
+# HackerChat
 
 HackerChat is a revolutionary idea comparable only to the invention of hot water or the re-engineering of the wheel. HackerChat will solve any communication issue by putting a chat right where you need it: right in the terminal. On top of that, HackerChat comes with state-of-the-art filters to facilitate communication and reduce professional and cultural misunderstandings.
 
