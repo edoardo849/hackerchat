@@ -59,3 +59,7 @@ make run
 make kafka-down
 
 ```
+
+# TODOS
+- Use [NSQ](https://github.com/nsqio/nsq) instead of Kafka
+- Investigate P2P because... why not? If life isn't spicy it's no fun...
