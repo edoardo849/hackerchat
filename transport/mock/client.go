@@ -1,6 +1,6 @@
 package mock
 
-import "github.com/edoardo849/hackerchat/chat"
+import chat "github.com/edoardo849/hackerchat/transport"
 
 // Client is a mock implementation chat Client
 type Client struct {

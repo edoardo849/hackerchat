@@ -7,8 +7,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/edoardo849/hackerchat/chat"
-	"github.com/edoardo849/hackerchat/chat/kafka"
+	chat "github.com/edoardo849/hackerchat/transport"
+	"github.com/edoardo849/hackerchat/transport/kafka"
 
 	"github.com/Shopify/sarama"
 	log "github.com/Sirupsen/logrus"

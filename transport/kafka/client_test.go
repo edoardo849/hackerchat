@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/Shopify/sarama"
-	"github.com/edoardo849/hackerchat/chat"
-	"github.com/edoardo849/hackerchat/chat/kafka"
+	chat "github.com/edoardo849/hackerchat/transport"
+	"github.com/edoardo849/hackerchat/transport/kafka"
 )
 
 func TestSendReceiveKafkaMessage(t *testing.T) {

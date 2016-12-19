@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/Shopify/sarama"
-	"github.com/edoardo849/hackerchat/chat"
+	chat "github.com/edoardo849/hackerchat/transport"
 )
 
 type client struct {

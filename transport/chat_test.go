@@ -1,11 +1,11 @@
-package chat_test
+package transport_test
 
 import (
 	"testing"
 	"time"
 
-	"github.com/edoardo849/hackerchat/chat"
-	"github.com/edoardo849/hackerchat/chat/mock"
+	chat "github.com/edoardo849/hackerchat/transport"
+	"github.com/edoardo849/hackerchat/transport/mock"
 )
 
 func TestWappedClient(t *testing.T) {

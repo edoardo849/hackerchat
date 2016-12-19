@@ -13,8 +13,8 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/edoardo849/hackerchat/cache"
-	"github.com/edoardo849/hackerchat/chat"
 	"github.com/edoardo849/hackerchat/filter"
+	chat "github.com/edoardo849/hackerchat/transport"
 )
 
 // User is the current user using the cli

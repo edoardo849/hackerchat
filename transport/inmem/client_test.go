@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/edoardo849/hackerchat/chat"
-	"github.com/edoardo849/hackerchat/chat/inmem"
+	chat "github.com/edoardo849/hackerchat/transport"
+	"github.com/edoardo849/hackerchat/transport/inmem"
 )
 
 func TestSendReceiveInMemMessage(t *testing.T) {
