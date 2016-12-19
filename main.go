@@ -7,10 +7,12 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/JSainsburyPLC/manchester-hackathon/xmas-2016/go-chat/chat"
-	"github.com/JSainsburyPLC/manchester-hackathon/xmas-2016/go-chat/cli"
+	"github.com/edoardo849/hackerchat/chat"
+	"github.com/edoardo849/hackerchat/chat/kafka"
+
 	"github.com/Shopify/sarama"
 	log "github.com/Sirupsen/logrus"
+	"github.com/edoardo849/hackerchat/cli"
 )
 
 func main() {
@@ -39,7 +41,7 @@ func main() {
 	config.Producer.Return.Successes = true
 
 	// TODO make this an env variable
-	kc, err := chat.NewKafkaClient([]string{"localhost:9092"}, config)
+	kc, err := kafka.NewClient([]string{"localhost:9092"}, config)
 	if err != nil {
 		log.WithError(err).Fatal("error connecting to kafka")
 	}

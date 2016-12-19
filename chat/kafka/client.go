@@ -1,31 +1,32 @@
-package chat
+package kafka
 
 import (
 	"encoding/json"
 	"log"
 
 	"github.com/Shopify/sarama"
+	"github.com/edoardo849/hackerchat/chat"
 )
 
-type kafkaClient struct {
+type client struct {
 	client sarama.Client
 }
 
-// NewKafkaClient implements basic client using kafka
-func NewKafkaClient(addrs []string, conf *sarama.Config) (BasicClient, error) {
-	client, err := sarama.NewClient(addrs, conf)
+// NewClient implements basic client using kafka
+func NewClient(addrs []string, conf *sarama.Config) (chat.BasicClient, error) {
+	sarClient, err := sarama.NewClient(addrs, conf)
 	if err != nil {
 		return nil, err
 	}
 
-	kafka := kafkaClient{
-		client: client,
+	kafka := client{
+		client: sarClient,
 	}
 
 	return kafka, nil
 }
 
-func (kc kafkaClient) Send(dest string, msg Message) error {
+func (kc client) Send(dest string, msg chat.Message) error {
 	producer, err := sarama.NewSyncProducerFromClient(kc.client)
 	if err != nil {
 		return err
@@ -56,8 +57,8 @@ func (kc kafkaClient) Send(dest string, msg Message) error {
 	return nil
 }
 
-func (kc kafkaClient) Receive(src string) (Message, error) {
-	var message Message
+func (kc client) Receive(src string) (chat.Message, error) {
+	var message chat.Message
 
 	consumer, err := sarama.NewConsumerFromClient(kc.client)
 	if err != nil {

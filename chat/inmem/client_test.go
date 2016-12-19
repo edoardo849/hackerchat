@@ -1,14 +1,15 @@
-package chat_test
+package inmem_test
 
 import (
 	"testing"
 	"time"
 
-	"github.com/JSainsburyPLC/manchester-hackathon/xmas-2016/go-chat/chat"
+	"github.com/edoardo849/hackerchat/chat"
+	"github.com/edoardo849/hackerchat/chat/inmem"
 )
 
 func TestSendReceiveInMemMessage(t *testing.T) {
-	client := chat.NewMemClient(100)
+	client := inmem.NewClient(100)
 	message := chat.Message{
 		Body:      "this is a test",
 		Author:    "go devs",

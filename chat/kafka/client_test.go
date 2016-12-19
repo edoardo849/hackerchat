@@ -1,11 +1,12 @@
-package chat_test
+package kafka_test
 
 import (
 	"testing"
 	"time"
 
-	"github.com/JSainsburyPLC/manchester-hackathon/xmas-2016/go-chat/chat"
 	"github.com/Shopify/sarama"
+	"github.com/edoardo849/hackerchat/chat"
+	"github.com/edoardo849/hackerchat/chat/kafka"
 )
 
 func TestSendReceiveKafkaMessage(t *testing.T) {
@@ -13,7 +14,7 @@ func TestSendReceiveKafkaMessage(t *testing.T) {
 	config.Producer.Return.Errors = true
 	config.Producer.Return.Successes = true
 
-	client, err := chat.NewKafkaClient([]string{"localhost:9092"}, config)
+	client, err := kafka.NewClient([]string{"localhost:9092"}, config)
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -12,9 +12,9 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"github.com/pkg/errors"
 
-	"github.com/JSainsburyPLC/manchester-hackathon/xmas-2016/go-chat/cache"
-	"github.com/JSainsburyPLC/manchester-hackathon/xmas-2016/go-chat/chat"
-	"github.com/JSainsburyPLC/manchester-hackathon/xmas-2016/go-chat/filter"
+	"github.com/edoardo849/hackerchat/cache"
+	"github.com/edoardo849/hackerchat/chat"
+	"github.com/edoardo849/hackerchat/filter"
 )
 
 // User is the current user using the cli

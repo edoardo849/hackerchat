@@ -4,11 +4,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/JSainsburyPLC/manchester-hackathon/xmas-2016/go-chat/chat"
+	"github.com/edoardo849/hackerchat/chat"
+	"github.com/edoardo849/hackerchat/chat/mock"
 )
 
 func TestWappedClient(t *testing.T) {
-	mock := &chat.MockClient{
+	c := &mock.Client{
 		SendFunc: func(dest string, msg chat.Message) error {
 			return nil
 		},
@@ -16,7 +17,7 @@ func TestWappedClient(t *testing.T) {
 			return chat.Message{}, nil
 		},
 	}
-	client := chat.BasicClientWrapper(mock, 100)
+	client := chat.BasicClientWrapper(c, 100)
 
 	message := chat.Message{
 		Body:      "this is a test",
@@ -25,7 +26,7 @@ func TestWappedClient(t *testing.T) {
 	}
 	t.Run("send", func(t *testing.T) {
 		done := make(chan interface{})
-		mock.SendFunc = func(dest string, received chat.Message) error {
+		c.SendFunc = func(dest string, received chat.Message) error {
 			defer close(done)
 			if received.Body != message.Body {
 				t.Errorf("expected Body: %s, got: %s", message.Body, received.Body)
@@ -55,7 +56,7 @@ func TestWappedClient(t *testing.T) {
 
 	})
 	t.Run("receive", func(t *testing.T) {
-		mock.ReceiveFunc = func(src string) (chat.Message, error) {
+		c.ReceiveFunc = func(src string) (chat.Message, error) {
 			return message, nil
 		}
 		receive, err := client.Consumer("test")
